@@ -1,6 +1,29 @@
-.App {
-  color: white;
-}
 * {
   background-color: black;
+  color: white;
+}
+
+.question-card{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 1rem;
+}
+
+button{
+  padding: 0.5rem;
+  border-radius: .7rem;
+  margin: .7rem;
+}
+
+.answers-btn{
+  display: flex;
+}
+
+.answers-btn button{
+  width: max-content;
+  overflow:visible;
 }
