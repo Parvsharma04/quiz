@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { fetchQuiz, Difficulty, QuestionState } from './API';
-import './app.css'
+import { Difficulty, fetchQuiz, QuestionState } from './API';
+import './app.css';
 import QuestionCard from './components/QuestionCard';
 
 const TOTAL_QUESTIONS = 10;
@@ -31,12 +31,12 @@ function App() {
     setLoading(false);
   };
 
-  
+
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
     const answer = e.currentTarget.innerText;
     const correct = questions[number].correct_answer === answer;
 
-    if (correct) setScore(prev => prev + 1);  
+    if (correct) setScore(prev => prev + 1);
 
     const answerObject = {
       question: questions[number].question,
@@ -46,7 +46,7 @@ function App() {
     };
     setUserAnswers(prev => [...prev, answerObject]);
     console.log(answerObject);
-    
+
   };
 
 
@@ -69,9 +69,9 @@ function App() {
         </button>
       ) : null}
 
-      {!gameOver && <h1 className="score">Score: {score}</h1>}
-
       {loading && <p>Loading...</p>}
+      {!gameOver && <h2 className="score">Score: {score}</h2>}
+
 
       {!loading && !gameOver && (
         <QuestionCard
@@ -94,4 +94,3 @@ function App() {
 }
 
 export default App;
-

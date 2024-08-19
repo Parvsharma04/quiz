@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnswerObject } from '../App'; 
+import { AnswerObject } from '../App';
 
 type Props = {
   question: string;
@@ -21,7 +21,7 @@ const QuestionCard: React.FC<Props> = ({
   return (
     <div className="question-card">
       <p className="number">
-        Question: {questionNumber} / {totalQuestions}
+        Question: {questionNumber} / {totalQuestions} :
       </p>
       <p dangerouslySetInnerHTML={{ __html: question }} />
       <div className="answers-btn">
@@ -38,4 +38,3 @@ const QuestionCard: React.FC<Props> = ({
 };
 
 export default QuestionCard;
-

@@ -9,13 +9,15 @@
   border: 1px solid white;
   justify-content: center;
   align-items: center;
-  width: fit-content;
+  width: inherit;
   margin: 0 1rem;
+  padding: 1rem;
 }
 
 button{
-  padding: 0.5rem;
   border-radius: .7rem;
+  padding: 1rem;
+  border: 1px solid white;
   margin: .7rem;
 }
 
@@ -24,6 +26,25 @@ button{
 }
 
 .answers-btn button{
-  width: max-content;
+  width: auto;
   overflow:visible;
+  padding: 1rem;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.number{
+  text-align: left;
+  width: 100%;
+}
+
+
+.score{
+  text-align: right;
 }
